@@ -46,7 +46,7 @@ Example:
 Use below parameters if required while annotating a method with above annotations:
 •	alwaysRun: For before methods (beforeSuite, beforeTest, beforeTestClass and beforeTestMethod, but not beforeGroups): If set to true, this configuration method will be run regardless of what groups it belongs to.For after methods (afterSuite, afterClass, ...): If set to true, this configuration method will be run even if one or more methods invoked previously failed or was skipped.
 •	Groups:	The list of groups this class/method belongs to.
-7.	@DataProvider: Method annotated with @DataProvider supply data to the test cases at the time of execution. The annotated method must return an Object[][] where each Object[] can be assigned the parameter list of the test method. The @Test method that wants to receive data from this DataProvider needs to use a dataProvider name equals to the name of this annotation.
+7.	@DataProvider: Method annotated with @DataProvider supply data to the test cases at the time of execution. The annotated method must return a 2D Object where each Object[] can be assigned the parameter list of the test method. The @Test method that wants to receive data from this DataProvider needs to use a dataProvider name equals to the name of this annotation.
 a.	Name: The name of this data provider. If it's not supplied, the name of this data provider will automatically be set to the name of the method.
 b.	parallel	If set to true, tests generated using this data provider are run in parallel. Default value is false.
 c.	DataProvider method can accept parameters like ITestContext, Method etc. which can be determined at execution time and depending on Test context/method, data conditions and test cases/methods that require data can be determined.
